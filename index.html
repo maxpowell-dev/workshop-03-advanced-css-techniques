@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First HTML Page</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Internal CSS -->
+    <style>
+        h2 {
+            color: green;
+        }
+
+        /* Workshop 3, Task 1: CSS Transitions */
+        .transition-button {
+            background-color: lightblue;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .transition-button:hover {
+            background-color: lightcoral;
+        }
+
+        /* Workshop 3, Task 2: CSS Animations */
+        .animation-box {
+            width: 50px;
+            height: 50px;
+            background-color: lightgreen;
+            position: relative;
+            animation: move 2s infinite alternate;
+        }
+
+        @keyframes move {
+            from { left: 0; }
+            to { left: 100px; }
+        }
+
+        /* Workshop 3, Task 3: CSS Pseudo-classes */
+        .pseudo-list li:nth-child(odd) {
+            background-color: lightgray;
+        }
+
+        .pseudo-list li:nth-child(even) {
+            background-color: white;
+        }
+
+        /* Workshop 3, Task 4: CSS Filters */
+        .filter-image {
+            max-width: 300px;
+            height: auto;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .filter-image:hover {
+            filter: grayscale(0%);
+        }
+
+        /* Workshop 3, Task 5: CSS Pseudo-elements */
+        .quote {
+            position: relative;
+            padding-left: 20px;
+            font-style: italic;
+        }
+
+        .quote::before {
+            content: '“';
+            font-size: 40px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: lightgray;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Inline CSS -->
+    <h1 style="color: red;">Welcome to my Page</h1>
+
+    <h2>About Me</h2>
+    <p>Hello! My name is Max. I am a student at Laurea University of Applied Sciences, studying Business Information Technology with a focus on Cyber Security.</p>
+
+    <!-- Task 4: filter applied here (grayscale, colour on hover) -->
+    <img src="profile.jpeg" alt="Photo of Max" class="filter-image">
+
+    <!-- div with padding and margin (from Workshop 2) -->
+    <div class="content-box">
+        <h3>Sample Heading</h3>
+        <p>This is a sample paragraph inside a div element.</p>
+    </div>
+
+    <h2>My Hobbies</h2>
+    <ul>
+        <li>Computers and technology</li>
+        <li>Cycling</li>
+        <li>Camping and hiking</li>
+        <li>Gaming</li>
+    </ul>
+
+    <h2>My Favourite Website</h2>
+    <p>Visit <a href="https://www.youtube.com">YouTube</a>.</p>
+
+    <h2>My Courses</h2>
+    <table>
+        <tr>
+            <th>Course</th>
+            <th>Subject</th>
+        </tr>
+        <tr>
+            <td>Business Information Technology</td>
+            <td>Cyber Security</td>
+        </tr>
+        <tr>
+            <td>Web Development</td>
+            <td>HTML Basics</td>
+        </tr>
+    </table>
+
+    <h2>Contact Me</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- ===== Workshop 3: Advanced CSS ===== -->
+    <h2>Workshop 3: Advanced CSS</h2>
+
+    <h3>Task 1: Transitions</h3>
+    <button class="transition-button">Hover me</button>
+
+    <h3>Task 2: Animations</h3>
+    <div class="animation-box"></div>
+
+    <h3>Task 3: Pseudo-classes</h3>
+    <ul class="pseudo-list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+
+    <h3>Task 4: Filters</h3>
+    <p>The photo of me above is grayscale. Hover over it to see it in colour.</p>
+
+    <h3>Task 5: Pseudo-elements</h3>
+    <blockquote class="quote">
+        This is a sample quote.
+    </blockquote>
+
+</body>
+</html>
